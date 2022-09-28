@@ -1,0 +1,18 @@
+.root {
+  width: auto;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  .bottomNavRoot {
+    margin-top: auto;
+    color: $quartary-color;
+    button {
+      color: rgba(0, 0, 0, 0.6);
+    }
+    .bottomNavigation {
+      background-color: $secondary-color;
+      color: $quartary-color;
+    }
+  }
+}
