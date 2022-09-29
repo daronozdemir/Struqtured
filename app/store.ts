@@ -3,11 +3,13 @@ import { createWrapper } from 'next-redux-wrapper';
 import { Action } from 'redux';
 import profileReducer from './slices/templateSlice';
 import counterReducer from '../components/counter/counterSlice';
+import plannerReducer from '../components/planner/plannerSlice'
 
 
 export const store = configureStore({
     reducer: {
         profile: profileReducer,
+        planner: plannerReducer,
         counter: counterReducer
     },
     devTools: true

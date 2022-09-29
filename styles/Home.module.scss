@@ -4,6 +4,18 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  .contentContainer {
+    height: 100vh;
+    width: 100vw;
+    padding: 5%;
+  }
+  .fab {
+    position: absolute;
+    background-color: $quartary-color;
+    color: $secondary-color;
+    right: 10px;
+    bottom: 100px;
+  }
   .bottomNavRoot {
     margin-top: auto;
     color: $quartary-color;

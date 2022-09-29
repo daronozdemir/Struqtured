@@ -14,10 +14,11 @@ import Profile from "components/profile/profile";
 import Progress from "components/progress/progress";
 import { redirect } from "next/dist/server/api-utils";
 import Planner from "components/planner/planner";
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
 
 const Home: NextPage = (props) => {
   const [value, setValue] = React.useState(0);
-  const [page, setPage] = useState("/");
 
   const changePageContent = () => {
     switch (value) {
@@ -36,7 +37,10 @@ const Home: NextPage = (props) => {
   return (
     <>
       <div className={styles.root}>
-        {changePageContent()}
+        <div className={styles.contentContainer}>{changePageContent()}</div>
+        <Fab className={styles.fab} aria-label="add">
+          <AddIcon />
+        </Fab>
         <Box className={styles.bottomNavRoot}>
           <BottomNavigation
             className={styles.bottomNavigation}
