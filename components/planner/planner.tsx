@@ -2,9 +2,10 @@ import { useAppSelector } from "app/reduxHooks";
 import { NextPage } from "next";
 import { useState } from "react";
 import styles from "./Planner.module.scss";
-import { selectHoursPlanned } from "./plannerSlice";
+import { selectHoursPlanned, selectScheduledTasks } from "./plannerSlice";
 const Planner = () => {
   const hours = useAppSelector(selectHoursPlanned);
+  const scheduledTasks = useAppSelector(selectScheduledTasks);
 
   return (
     <>
@@ -24,7 +25,12 @@ const Planner = () => {
             );
           })}
         </div>
-        <div className={styles.tasksContainer}>t</div>
+        <div className={styles.tasksContainer}>
+          <div className={styles.task}>d</div>
+          <div>d</div>
+          <div>d</div>
+          <div>d</div>
+        </div>
       </div>
     </>
   );

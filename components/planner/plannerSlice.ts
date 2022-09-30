@@ -4,10 +4,20 @@ import type { RootState, AppThunk } from '../../app/store'
 
 export interface PlannerState {
     hours: number[]
+    task: [{
+        from: string,
+        to: string,
+        name: string
+    }]
 }
 
 const initialState: PlannerState = {
     hours: [0.00, 9.00, 17.00, 24.00],
+    task: [{
+        from: "09.00",
+        to: "17.30",
+        name: "work"
+    }]
 }
 
 export const plannerSlice = createSlice({
@@ -28,6 +38,9 @@ export const plannerSlice = createSlice({
 
 
 export const selectHoursPlanned = (state: RootState) => state.planner.hours
+
+export const selectScheduledTasks = (state: RootState) => state.planner.task
+
 
 export const { addHour } = plannerSlice.actions
 
